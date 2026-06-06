@@ -11,6 +11,16 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+### Supabase
+
+1. Copy `.env.example` to `.env.local`
+2. Add your project URL and publishable (or anon) key from the [Supabase dashboard](https://supabase.com/dashboard)
+3. Restart the dev server — the home page shows connection status
+
+```bash
+cp .env.example .env.local
+```
+
 ### Scripts
 
 | Command | Description |
@@ -28,7 +38,9 @@ The SwiftUI iOS app lives in [`ios/`](ios/) for future development. See [`ios/RE
 
 ```
 beneon/
-├── src/              # Next.js app (web)
+├── src/
+│   ├── app/          # Next.js routes
+│   └── lib/supabase/ # Supabase clients (browser, server, proxy)
 ├── public/           # Static assets
 ├── ios/              # SwiftUI iOS app (paused)
 └── package.json
