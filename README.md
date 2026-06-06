@@ -1,36 +1,35 @@
 # beneon
 
-A SwiftUI iOS application.
+A conversational web app for Bible readings, prayer, and community.
 
-## Requirements
-
-- Xcode 16+
-- iOS 17.0+
-- [XcodeGen](https://github.com/yonaskolb/XcodeGen) (for project generation)
-
-## Getting Started
-
-Generate the Xcode project:
+## Web (Next.js)
 
 ```bash
-xcodegen generate
+npm install
+npm run dev
 ```
 
-Open in Xcode:
+Open [http://localhost:3000](http://localhost:3000).
 
-```bash
-open beneon.xcodeproj
-```
+### Scripts
 
-Select your development team in the project settings, then build and run on a simulator or device.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
+
+## iOS
+
+The SwiftUI iOS app lives in [`ios/`](ios/) for future development. See [`ios/README.md`](ios/README.md).
 
 ## Project Structure
 
 ```
 beneon/
-├── beneon/
-│   ├── Sources/          # Swift source files
-│   └── Resources/        # Assets, Info.plist
-├── project.yml           # XcodeGen project spec
-└── README.md
+├── src/              # Next.js app (web)
+├── public/           # Static assets
+├── ios/              # SwiftUI iOS app (paused)
+└── package.json
 ```
