@@ -7,118 +7,118 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		881258C3D9D504D8A49CEDB0 /* JesusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E6B742A99495453CB9083 /* JesusApp.swift */; };
-		F21C0767B72B3C52A9F634B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39C4007846C8CB22FDFBF09 /* ContentView.swift */; };
+		6737E75529EA6C582DCF4223 /* jesusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A2D7800D7160CF198E8D23 /* jesusApp.swift */; };
+		D1FD86B98FC5BE22E8173F5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F887D45D504ADFB26D7F77B /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD3A910ABC6A3D33EF268238 /* Jesus.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Jesus.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D39C4007846C8CB22FDFBF09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E96E6B742A99495453CB9083 /* JesusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JesusApp.swift; sourceTree = "<group>"; };
+		31A2D7800D7160CF198E8D23 /* jesusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jesusApp.swift; sourceTree = "<group>"; };
+		8F887D45D504ADFB26D7F77B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AE6A602FD7F1E5D564394654 /* jesus.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = jesus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		169315695ACA6922EC2A49A9 /* Sources */ = {
+		363709F3E83227572900ECDE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D39C4007846C8CB22FDFBF09 /* ContentView.swift */,
-				E96E6B742A99495453CB9083 /* JesusApp.swift */,
+				8F887D45D504ADFB26D7F77B /* ContentView.swift */,
+				31A2D7800D7160CF198E8D23 /* jesusApp.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		263D830B95722FBFDCD54DA9 /* Products */ = {
+		9883A49DA4985FCF0855AB5B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD3A910ABC6A3D33EF268238 /* Jesus.app */,
+				AE6A602FD7F1E5D564394654 /* jesus.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2920526787F841CCF0C69300 = {
+		C605D6B649ED853316C88E6C /* jesus */ = {
 			isa = PBXGroup;
 			children = (
-				A55A4F90B9C16DE2D0E817D2 /* Jesus */,
-				263D830B95722FBFDCD54DA9 /* Products */,
+				363709F3E83227572900ECDE /* Sources */,
 			);
+			path = jesus;
 			sourceTree = "<group>";
 		};
-		A55A4F90B9C16DE2D0E817D2 /* Jesus */ = {
+		D44E78CF69A52351E7E6EE07 = {
 			isa = PBXGroup;
 			children = (
-				169315695ACA6922EC2A49A9 /* Sources */,
+				C605D6B649ED853316C88E6C /* jesus */,
+				9883A49DA4985FCF0855AB5B /* Products */,
 			);
-			path = Jesus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		718C25C0053891416C78B5E3 /* Jesus */ = {
+		10FFB8B1F42BD8A9AAB64EBD /* jesus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9C7D75B2B243456D8488FD0 /* Build configuration list for PBXNativeTarget "Jesus" */;
+			buildConfigurationList = 4B7C28C6FC18DD853A1EFD8A /* Build configuration list for PBXNativeTarget "jesus" */;
 			buildPhases = (
-				F456F84F7E8A8C3EF6C3E970 /* Sources */,
+				0F54D7960DB6C5FD5232A205 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Jesus;
+			name = jesus;
 			packageProductDependencies = (
 			);
-			productName = Jesus;
-			productReference = AD3A910ABC6A3D33EF268238 /* Jesus.app */;
+			productName = jesus;
+			productReference = AE6A602FD7F1E5D564394654 /* jesus.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6F18D9433A7FD4862B44BE6E /* Project object */ = {
+		372446DBC1F842C5660D1CC9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					718C25C0053891416C78B5E3 = {
+					10FFB8B1F42BD8A9AAB64EBD = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = B7CA644D876666ED058B418B /* Build configuration list for PBXProject "Jesus" */;
+			buildConfigurationList = C1779AB76BF706D079BE209B /* Build configuration list for PBXProject "jesus" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
 				en,
 			);
-			mainGroup = 2920526787F841CCF0C69300;
+			mainGroup = D44E78CF69A52351E7E6EE07;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 263D830B95722FBFDCD54DA9 /* Products */;
+			productRefGroup = 9883A49DA4985FCF0855AB5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				718C25C0053891416C78B5E3 /* Jesus */,
+				10FFB8B1F42BD8A9AAB64EBD /* jesus */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F456F84F7E8A8C3EF6C3E970 /* Sources */ = {
+		0F54D7960DB6C5FD5232A205 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F21C0767B72B3C52A9F634B1 /* ContentView.swift in Sources */,
-				881258C3D9D504D8A49CEDB0 /* JesusApp.swift in Sources */,
+				D1FD86B98FC5BE22E8173F5E /* ContentView.swift in Sources */,
+				6737E75529EA6C582DCF4223 /* jesusApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4B6777FED060E1919CBED005 /* Release */ = {
+		0BFFB2A87AB6C6B4194DC646 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -176,7 +176,47 @@
 			};
 			name = Release;
 		};
-		4E7F4C3B36BB836D6535E657 /* Debug */ = {
+		170FF83128A31CD57ECCEA7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = jesus/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smkjason.jesus;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F61569E1E2875255FBFFE37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = jesus/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smkjason.jesus;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BBEB90DD783528EF464603FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -241,68 +281,28 @@
 			};
 			name = Debug;
 		};
-		D33AFB1FBC894B99F8A0135D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Jesus/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.smkjason.Jesus;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		F57DAD9C7EF771F25200E73C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = Jesus/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.smkjason.Jesus;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B7CA644D876666ED058B418B /* Build configuration list for PBXProject "Jesus" */ = {
+		4B7C28C6FC18DD853A1EFD8A /* Build configuration list for PBXNativeTarget "jesus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E7F4C3B36BB836D6535E657 /* Debug */,
-				4B6777FED060E1919CBED005 /* Release */,
+				170FF83128A31CD57ECCEA7D /* Debug */,
+				3F61569E1E2875255FBFFE37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F9C7D75B2B243456D8488FD0 /* Build configuration list for PBXNativeTarget "Jesus" */ = {
+		C1779AB76BF706D079BE209B /* Build configuration list for PBXProject "jesus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F57DAD9C7EF771F25200E73C /* Debug */,
-				D33AFB1FBC894B99F8A0135D /* Release */,
+				BBEB90DD783528EF464603FC /* Debug */,
+				0BFFB2A87AB6C6B4194DC646 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6F18D9433A7FD4862B44BE6E /* Project object */;
+	rootObject = 372446DBC1F842C5660D1CC9 /* Project object */;
 }

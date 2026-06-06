@@ -1,4 +1,4 @@
-# Jesus
+# jesus
 
 A SwiftUI iOS application.
 
@@ -19,7 +19,7 @@ xcodegen generate
 Open in Xcode:
 
 ```bash
-open Jesus.xcodeproj
+open jesus.xcodeproj
 ```
 
 Select your development team in the project settings, then build and run on a simulator or device.
@@ -27,8 +27,8 @@ Select your development team in the project settings, then build and run on a si
 ## Project Structure
 
 ```
-Jesus/
-├── Jesus/
+jesus/
+├── jesus/
 │   ├── Sources/          # Swift source files
 │   └── Resources/        # Assets, Info.plist
 ├── project.yml           # XcodeGen project spec

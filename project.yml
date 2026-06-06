@@ -1,4 +1,4 @@
-name: Jesus
+name: jesus
 options:
   bundleIdPrefix: com.smkjason
   deploymentTarget:
@@ -13,17 +13,17 @@ settings:
     DEVELOPMENT_TEAM: ""
 
 targets:
-  Jesus:
+  jesus:
     type: application
     platform: iOS
     sources:
-      - path: Jesus/Sources
+      - path: jesus/Sources
     resources:
-      - path: Jesus/Resources
+      - path: jesus/Resources
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.smkjason.Jesus
-        INFOPLIST_FILE: Jesus/Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.smkjason.jesus
+        INFOPLIST_FILE: jesus/Resources/Info.plist
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         GENERATE_INFOPLIST_FILE: false
         CURRENT_PROJECT_VERSION: 1
