@@ -31,9 +31,7 @@ beneon/
 ├── postcss.config.mjs    # @tailwindcss/postcss
 ├── package.json
 ├── MISSION.md            # Product mission and principles (read first)
-├── AGENT_PROMPTS.md      # Redirect → GitHub Project issues
 ├── AGENTS.md             # Agent technical guidance
-├── CLAUDE.md             # Points to AGENTS.md
 └── README.md             # Human quick-start
 ```
 
