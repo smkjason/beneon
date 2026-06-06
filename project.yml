@@ -1,4 +1,4 @@
-name: jesus
+name: beneon
 options:
   bundleIdPrefix: com.smkjason
   deploymentTarget:
@@ -13,17 +13,17 @@ settings:
     DEVELOPMENT_TEAM: ""
 
 targets:
-  jesus:
+  beneon:
     type: application
     platform: iOS
     sources:
-      - path: jesus/Sources
+      - path: beneon/Sources
     resources:
-      - path: jesus/Resources
+      - path: beneon/Resources
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.smkjason.jesus
-        INFOPLIST_FILE: jesus/Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.smkjason.beneon
+        INFOPLIST_FILE: beneon/Resources/Info.plist
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         GENERATE_INFOPLIST_FILE: false
         CURRENT_PROJECT_VERSION: 1

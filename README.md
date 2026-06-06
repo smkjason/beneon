@@ -1,4 +1,4 @@
-# jesus
+# beneon
 
 A SwiftUI iOS application.
 
@@ -19,7 +19,7 @@ xcodegen generate
 Open in Xcode:
 
 ```bash
-open jesus.xcodeproj
+open beneon.xcodeproj
 ```
 
 Select your development team in the project settings, then build and run on a simulator or device.
@@ -27,8 +27,8 @@ Select your development team in the project settings, then build and run on a si
 ## Project Structure
 
 ```
-jesus/
-├── jesus/
+beneon/
+├── beneon/
 │   ├── Sources/          # Swift source files
 │   └── Resources/        # Assets, Info.plist
 ├── project.yml           # XcodeGen project spec

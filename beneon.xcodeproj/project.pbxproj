@@ -7,118 +7,118 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6737E75529EA6C582DCF4223 /* jesusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A2D7800D7160CF198E8D23 /* jesusApp.swift */; };
-		D1FD86B98FC5BE22E8173F5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F887D45D504ADFB26D7F77B /* ContentView.swift */; };
+		8FD11E5F5436167AFF48A3A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C6F083C4FFF6ADF7938C76 /* ContentView.swift */; };
+		A8C605243EB2E2A2F53AE412 /* beneonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270457148AEB31E533397B8 /* beneonApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		31A2D7800D7160CF198E8D23 /* jesusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jesusApp.swift; sourceTree = "<group>"; };
-		8F887D45D504ADFB26D7F77B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AE6A602FD7F1E5D564394654 /* jesus.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = jesus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5270457148AEB31E533397B8 /* beneonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beneonApp.swift; sourceTree = "<group>"; };
+		71C6F083C4FFF6ADF7938C76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9B3BC76242A814EF7D6FC37D /* beneon.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = beneon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		363709F3E83227572900ECDE /* Sources */ = {
+		2350F7E4C296EA845CE6755F = {
 			isa = PBXGroup;
 			children = (
-				8F887D45D504ADFB26D7F77B /* ContentView.swift */,
-				31A2D7800D7160CF198E8D23 /* jesusApp.swift */,
+				F149530EBACABA536ADAE192 /* beneon */,
+				A64A473F3776AAB5B7FAB8D6 /* Products */,
 			);
-			path = Sources;
 			sourceTree = "<group>";
 		};
-		9883A49DA4985FCF0855AB5B /* Products */ = {
+		A64A473F3776AAB5B7FAB8D6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AE6A602FD7F1E5D564394654 /* jesus.app */,
+				9B3BC76242A814EF7D6FC37D /* beneon.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C605D6B649ED853316C88E6C /* jesus */ = {
+		F149530EBACABA536ADAE192 /* beneon */ = {
 			isa = PBXGroup;
 			children = (
-				363709F3E83227572900ECDE /* Sources */,
+				FB73350E2FB74B2EE71F0052 /* Sources */,
 			);
-			path = jesus;
+			path = beneon;
 			sourceTree = "<group>";
 		};
-		D44E78CF69A52351E7E6EE07 = {
+		FB73350E2FB74B2EE71F0052 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				C605D6B649ED853316C88E6C /* jesus */,
-				9883A49DA4985FCF0855AB5B /* Products */,
+				5270457148AEB31E533397B8 /* beneonApp.swift */,
+				71C6F083C4FFF6ADF7938C76 /* ContentView.swift */,
 			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		10FFB8B1F42BD8A9AAB64EBD /* jesus */ = {
+		DFE2BF5D7673B9E52FDD7A6C /* beneon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B7C28C6FC18DD853A1EFD8A /* Build configuration list for PBXNativeTarget "jesus" */;
+			buildConfigurationList = 0E1A260DCE0B69B6D7DD3487 /* Build configuration list for PBXNativeTarget "beneon" */;
 			buildPhases = (
-				0F54D7960DB6C5FD5232A205 /* Sources */,
+				681E8F81BD6F2CDFEECE1781 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = jesus;
+			name = beneon;
 			packageProductDependencies = (
 			);
-			productName = jesus;
-			productReference = AE6A602FD7F1E5D564394654 /* jesus.app */;
+			productName = beneon;
+			productReference = 9B3BC76242A814EF7D6FC37D /* beneon.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		372446DBC1F842C5660D1CC9 /* Project object */ = {
+		25E41B8E2EF22E9D6AB8ED5C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					10FFB8B1F42BD8A9AAB64EBD = {
+					DFE2BF5D7673B9E52FDD7A6C = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = C1779AB76BF706D079BE209B /* Build configuration list for PBXProject "jesus" */;
+			buildConfigurationList = 93DD9D032B614C0CB8436BB2 /* Build configuration list for PBXProject "beneon" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
 				en,
 			);
-			mainGroup = D44E78CF69A52351E7E6EE07;
+			mainGroup = 2350F7E4C296EA845CE6755F;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 9883A49DA4985FCF0855AB5B /* Products */;
+			productRefGroup = A64A473F3776AAB5B7FAB8D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				10FFB8B1F42BD8A9AAB64EBD /* jesus */,
+				DFE2BF5D7673B9E52FDD7A6C /* beneon */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0F54D7960DB6C5FD5232A205 /* Sources */ = {
+		681E8F81BD6F2CDFEECE1781 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1FD86B98FC5BE22E8173F5E /* ContentView.swift in Sources */,
-				6737E75529EA6C582DCF4223 /* jesusApp.swift in Sources */,
+				8FD11E5F5436167AFF48A3A0 /* ContentView.swift in Sources */,
+				A8C605243EB2E2A2F53AE412 /* beneonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		0BFFB2A87AB6C6B4194DC646 /* Release */ = {
+		2E3BBA74235BA7ACFB6387B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -176,7 +176,7 @@
 			};
 			name = Release;
 		};
-		170FF83128A31CD57ECCEA7D /* Debug */ = {
+		362EB9CA2460799CC42992B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -184,39 +184,39 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = jesus/Resources/Info.plist;
+				INFOPLIST_FILE = beneon/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.smkjason.jesus;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3F61569E1E2875255FBFFE37 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = jesus/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.smkjason.jesus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smkjason.beneon;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		BBEB90DD783528EF464603FC /* Debug */ = {
+		54AFDF1254416BB3ECD961B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = beneon/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smkjason.beneon;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F37D414B91946E22FFD1010 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,25 +284,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4B7C28C6FC18DD853A1EFD8A /* Build configuration list for PBXNativeTarget "jesus" */ = {
+		0E1A260DCE0B69B6D7DD3487 /* Build configuration list for PBXNativeTarget "beneon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				170FF83128A31CD57ECCEA7D /* Debug */,
-				3F61569E1E2875255FBFFE37 /* Release */,
+				54AFDF1254416BB3ECD961B6 /* Debug */,
+				362EB9CA2460799CC42992B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C1779AB76BF706D079BE209B /* Build configuration list for PBXProject "jesus" */ = {
+		93DD9D032B614C0CB8436BB2 /* Build configuration list for PBXProject "beneon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BBEB90DD783528EF464603FC /* Debug */,
-				0BFFB2A87AB6C6B4194DC646 /* Release */,
+				7F37D414B91946E22FFD1010 /* Debug */,
+				2E3BBA74235BA7ACFB6387B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 372446DBC1F842C5660D1CC9 /* Project object */;
+	rootObject = 25E41B8E2EF22E9D6AB8ED5C /* Project object */;
 }

@@ -7,7 +7,7 @@ struct ContentView: View {
                 .font(.system(size: 48))
                 .foregroundStyle(.primary)
 
-            Text("jesus")
+            Text("beneon")
                 .font(.largeTitle)
                 .fontWeight(.semibold)
 
