@@ -13,9 +13,12 @@ Christian app for Scripture, prayer, community, and character formation. **Read 
 | Path | Purpose |
 |------|---------|
 | `src/app/` | Next.js App Router — **primary work area** |
-| `src/` | Future `components/`, `lib/`, etc. |
+| `src/lib/` | Supabase clients, auth helpers, shared utilities |
+| `src/components/` | Shared UI (client or server) — add as needed |
 | `public/` | Static assets (stays at repo root) |
+| `supabase/migrations/` | Postgres schema + RLS migrations |
 | `ios/` | SwiftUI app — **paused; do not touch unless asked** |
+| `Makefile` | Local dev shortcuts (`make dev`, etc.) |
 | Config files | `next.config.ts`, `tsconfig.json`, etc. at repo root |
 
 Use `@/*` imports (`tsconfig` paths → `./src/*`).
@@ -46,14 +49,33 @@ Use `@/*` imports (`tsconfig` paths → `./src/*`).
 ## Commands
 
 ```bash
-npm install          # Install dependencies
-npm run dev          # Dev server → http://localhost:3000
-npm run build        # Production build
-npm run start        # Run production server
-npm run lint         # ESLint (flat config)
+make dev             # Dev server → http://localhost:3000 (preferred)
+make install         # Install dependencies
+make build           # Production build
+make lint            # ESLint (flat config)
+make help            # List all make targets
 ```
 
+Equivalent npm scripts: `npm run dev`, `npm run build`, `npm run start`, `npm run lint`.
+
 Do not commit `node_modules/`, `.next/`, or `.env*` files.
+
+## App routes
+
+Current and planned routes. See [MISSION.md](MISSION.md) **App structure** for product intent.
+
+| Route | Status | Notes |
+|-------|--------|-------|
+| `/` | **Live** | Pre-login marketing hero for signed-out users; dashboard TBD for signed-in |
+| `/login` | **Live** | Email/password sign up and sign in |
+| `/auth/confirm` | **Live** | Email verification callback |
+| `/auth/signout` | **Live** | Sign out |
+| `/quiet-time` | Planned | **Bible reading + AI quiet time** — no separate `/read` route |
+| `/prayer` | Planned | Prayer log placeholder |
+| `/community` | Planned | Community placeholder |
+| `/character` | Planned | Character progression placeholder |
+
+When building the app shell (#4): keep the signed-out hero at `/`; add nav + placeholder pages for signed-in users. Quiet time is the Scripture surface — do not introduce `/read`.
 
 ## Git workflow
 
@@ -80,7 +102,8 @@ GitHub Projects uses a built-in **Status** field with these three options. More 
 1. **Before starting** — Read [MISSION.md](MISSION.md) and this file. Open the board and pick a **Todo** item (or take the one the user assigned).
 2. **Claim work** — Move the item to **In Progress** on the board (or ask the user to). Note the issue number in your session.
 3. **Execute** — Follow the issue body: Goal, Scope, Requirements, Do not, Deliverables.
-4. **Finish** — Move to **Done**, close the issue if appropriate, update [REVIEW.md](REVIEW.md) checklist items, commit only when the user asks.
+4. **Finish** — Run `/whats-next` (skill: `.cursor/skills/whats-next/`) to mark the issue **Done**, get 3 mission-prioritized next options, and copy the handoff prompt into a new agent for the chosen task. Update [REVIEW.md](REVIEW.md) checklist items when appropriate; commit only when the user asks.
+5. **Session end** — If the user stated new product or coding preferences, run **update-project-docs** (`.cursor/skills/update-project-docs/`) and propose MISSION.md / AGENTS.md edits for approval before applying.
 
 ### Creating tasks (humans)
 
@@ -121,7 +144,7 @@ Bulleted list of what is in / out.
 - What ships; REVIEW.md updates if relevant
 ```
 
-Suggested order for bootstrap work: schema → auth → app shell → AI quiet time → CI. Local env setup can run anytime on a new machine.
+Suggested order for bootstrap work: schema (profiles done) → auth (done) → app shell → AI quiet time → CI. Local env setup can run anytime on a new machine.
 
 ### Project board
 
@@ -162,7 +185,7 @@ Match existing code in `src/app/`:
 - **Components** — Server Components default; `'use client'` only at interactive entry points
 - **Pages** — `export default function Name()` (sync OK when no dynamic APIs)
 - **Styling** — Tailwind utilities; zinc palette; `dark:` variants; CSS variables in `globals.css`
-- **Fonts** — `next/font/google` with CSS variables (`--font-geist-sans`, `--font-geist-mono`)
+- **Fonts** — Geist Sans / Mono app-wide via root layout; Instrument Serif on the pre-login landing hero only unless design extends it
 - **Quotes** — double quotes; semicolons; trailing commas in multiline objects
 - **Scope** — minimal diffs; no drive-by refactors; reuse patterns from surrounding files
 
@@ -199,6 +222,9 @@ Integrated via `@supabase/ssr` in `src/lib/supabase/`:
 | `client.ts` | Client Components (browser) |
 | `server.ts` | Server Components, Route Handlers, Server Actions |
 | `proxy.ts` | Session refresh (called from `src/proxy.ts`) |
+| `auth.ts` | Server-side `getAuthUser()` helper |
+| `profiles.ts` | Profile reads/writes |
+| `database.types.ts` | Generated `Database` types — use on all clients |
 | `env.ts` | Env validation; supports publishable or legacy anon key |
 | `status.ts` | Connection health check |
 
@@ -206,6 +232,7 @@ Env vars in `.env.local` (see `.env.example`):
 
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (or `NEXT_PUBLIC_SUPABASE_ANON_KEY`)
+- `NEXT_PUBLIC_SITE_URL` — email confirmation redirects (defaults to `http://localhost:3000`)
 - `SUPABASE_SERVICE_ROLE_KEY` (server-only, when needed)
 
 **RLS on every table** in exposed schemas; never trust `user_metadata` for authorization. Use migrations for schema changes; prefer Supabase MCP or CLI.

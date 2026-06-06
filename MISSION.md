@@ -14,10 +14,13 @@ To make consistent time in God's Word and in prayer a natural, rewarding part of
 
 beneon is built around the Bible. Users read Scripture in a focused, distraction-free experience designed for daily return — not as an add-on, but as the foundation of the product.
 
+Reading happens inside **quiet time** — there is no separate “Bible app” surface. Scripture and reflection share one flow.
+
 ### AI-guided quiet time
 
-A conversational guide leads users through quiet time with the Word:
+Quiet time is the primary Scripture experience: read the Word, then walk through it with a conversational guide.
 
+- Bible reading in a focused, distraction-free view
 - Reflective prompts grounded in what they read
 - Prayer oriented toward Scripture, not generic inspiration
 - A personal, guided flow — thoughtful companion, not a novelty chatbot
@@ -43,6 +46,20 @@ Features should uphold:
 - **Community with purpose** — connection that builds character, not performative feeds
 - **Tone of grace** — warm, respectful, encouraging; never preachy or transactional
 - **Privacy by design** — spiritual life is personal; sharing is always intentional
+
+## App structure
+
+How major areas map to the product (routes may evolve; names should stay mission-aligned):
+
+| Area | Route | Purpose |
+|------|-------|---------|
+| Home | `/` | Signed-out: welcome and sign-in. Signed-in: dashboard and habit summary. |
+| Quiet time | `/quiet-time` | **Bible reading + AI-guided reflection and prayer** — one flow, not a separate reader |
+| Prayer | `/prayer` | Personal and intercessory prayer log |
+| Community | `/community` | Encouragement, accountability, shared progress |
+| Character | `/character` | Progression tied to consistency in reading, prayer, and care for others |
+
+Do not split Bible reading into its own top-level route (e.g. `/read`). Quiet time *is* how users engage Scripture.
 
 ## What we are not building
 
