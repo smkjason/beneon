@@ -1,16 +1,34 @@
+import { createServerClient } from "@supabase/ssr";
 import { revalidatePath } from "next/cache";
 import { type NextRequest, NextResponse } from "next/server";
 
-import { createClient } from "@/lib/supabase/server";
+import type { Database } from "@/lib/supabase/database.types";
+import { getSupabaseEnv } from "@/lib/supabase/env";
 
 async function signOut(request: NextRequest) {
-  const supabase = await createClient();
+  const response = NextResponse.redirect(new URL("/", request.url), {
+    status: 302,
+  });
+
+  const { url, key } = getSupabaseEnv();
+
+  const supabase = createServerClient<Database>(url, key, {
+    cookies: {
+      getAll() {
+        return request.cookies.getAll();
+      },
+      setAll(cookiesToSet) {
+        cookiesToSet.forEach(({ name, value, options }) =>
+          response.cookies.set(name, value, options),
+        );
+      },
+    },
+  });
+
   await supabase.auth.signOut();
   revalidatePath("/", "layout");
 
-  return NextResponse.redirect(new URL("/", request.url), {
-    status: 302,
-  });
+  return response;
 }
 
 export async function GET(request: NextRequest) {

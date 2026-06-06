@@ -148,5 +148,5 @@ Track and pick up work on the **[GitHub Project board](https://github.com/users/
 - [x] Initial `profiles` table + RLS (extends `auth.users`); readings/prayers tables TBD
 - [ ] Choose and wire AI chat provider
 - [x] Add auth flows (sign up / sign in / session refresh) — email/password via Supabase Auth; `/login`, `/auth/confirm`, `/auth/signout`
-- [ ] Replace landing page with app shell (nav, chat, prayer)
+- [x] Replace landing page with app shell (nav, quiet time, prayer, community, character)
 - [ ] Set up CI (lint + build on PR)
