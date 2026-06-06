@@ -4,7 +4,9 @@ Initialization and review doc for contributors and AI agents. See [AGENTS.md](AG
 
 ## Overview
 
-**beneon** is a conversational web app for Bible readings, prayer time, and community. The active development target is the Next.js web app at the repo root. A SwiftUI iOS app in `ios/` is preserved for later.
+**beneon** helps Christians build a daily rhythm of Scripture, prayer, and community — with character growth over time. See **[MISSION.md](MISSION.md)** for the full product vision.
+
+The active development target is the Next.js web app at the repo root. A SwiftUI iOS app in `ios/` is preserved for later.
 
 - **GitHub:** [smkjason/beneon](https://github.com/smkjason/beneon) (private)
 - **Status:** Early bootstrap — landing page only; backend and features not started
@@ -28,7 +30,8 @@ beneon/
 ├── eslint.config.mjs     # ESLint flat config
 ├── postcss.config.mjs    # @tailwindcss/postcss
 ├── package.json
-├── AGENTS.md             # Agent instructions (read before coding)
+├── MISSION.md            # Product mission and principles (read first)
+├── AGENTS.md             # Agent technical guidance
 ├── CLAUDE.md             # Points to AGENTS.md
 └── README.md             # Human quick-start
 ```

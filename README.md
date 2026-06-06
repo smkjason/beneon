@@ -1,6 +1,6 @@
 # beneon
 
-A conversational web app for Bible readings, prayer, and community.
+A Christian app for Scripture, prayer, community, and character formation. See [MISSION.md](MISSION.md) for the product vision.
 
 ## Web (Next.js)
 

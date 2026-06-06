@@ -6,7 +6,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 # beneon — Agent Guide
 
-Conversational web app for Bible readings, prayer, and community. Read [REVIEW.md](REVIEW.md) for project status and open questions.
+Christian app for Scripture, prayer, community, and character formation. **Read [MISSION.md](MISSION.md) first** — product vision and standards. See [REVIEW.md](REVIEW.md) for project status.
 
 ## Repo layout
 
@@ -129,6 +129,7 @@ Env vars in `.env.local` (see `.env.example`):
 
 ## Related docs
 
+- [MISSION.md](MISSION.md) — product mission and principles (**read first**)
 - [REVIEW.md](REVIEW.md) — status, checklist, open questions
 - [README.md](README.md) — human quick-start
 - [ios/README.md](ios/README.md) — iOS setup (paused)
