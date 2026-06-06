@@ -31,6 +31,7 @@ beneon/
 ├── postcss.config.mjs    # @tailwindcss/postcss
 ├── package.json
 ├── MISSION.md            # Product mission and principles (read first)
+├── AGENT_PROMPTS.md      # Redirect → GitHub Project issues
 ├── AGENTS.md             # Agent technical guidance
 ├── CLAUDE.md             # Points to AGENTS.md
 └── README.md             # Human quick-start
@@ -130,7 +131,7 @@ See [ios/README.md](ios/README.md).
 
 ## Open questions
 
-1. **Supabase project** — Link an active project (existing `manna` project is paused >90 days and cannot be restored)
+1. **Supabase project** — Active project `beneon` (`jiqbhvwdppevfhzymkdo`, us-west-2); schema not started yet
 2. **AI provider** — OpenAI, Anthropic, Vercel AI SDK, or other?
 3. **Bible text** — API (e.g. API.Bible), public domain, or licensed?
 4. **Auth model** — Email/password, OAuth (Google/Apple), anonymous-first?
@@ -139,12 +140,15 @@ See [ios/README.md](ios/README.md).
 
 ## Next steps checklist
 
+Track and pick up work on the **[GitHub Project board](https://github.com/users/smkjason/projects/2)** (see [AGENTS.md](AGENTS.md)). Issues: [smkjason/beneon/issues](https://github.com/smkjason/beneon/issues)
+
 - [x] Install `@supabase/supabase-js` and `@supabase/ssr`
 - [x] Add `src/lib/supabase/` clients (browser, server, proxy)
 - [x] Add `.env.example` with documented placeholders
-- [ ] Link active Supabase project and configure `.env.local`
-- [ ] Design initial schema (users, sessions, readings, prayers) with RLS
+- [x] Link active Supabase project (`beneon` / `jiqbhvwdppevfhzymkdo`)
+- [ ] Configure `.env.local` locally (gitignored; copy from `.env.example`)
+- [x] Initial `profiles` table + RLS (extends `auth.users`); readings/prayers tables TBD
 - [ ] Choose and wire AI chat provider
-- [ ] Add auth flows (sign up / sign in / session refresh)
+- [x] Add auth flows (sign up / sign in / session refresh) — email/password via Supabase Auth; `/login`, `/auth/confirm`, `/auth/signout`
 - [ ] Replace landing page with app shell (nav, chat, prayer)
 - [ ] Set up CI (lint + build on PR)

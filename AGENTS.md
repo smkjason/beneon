@@ -61,6 +61,99 @@ Solo project — not productionized yet. **Commit and push directly to `main`** 
 
 Still never commit secrets (see Security below).
 
+## Task tracking (GitHub Projects)
+
+Work is tracked on the **[beneon GitHub Project](https://github.com/users/smkjason/projects/2)** board (repo: `smkjason/beneon`). Each task is a GitHub issue linked to the project.
+
+### Kanban states
+
+| Status | Meaning |
+|--------|---------|
+| **Todo** | Ready to pick up; not started |
+| **In Progress** | Someone (human or agent) is actively working on it |
+| **Done** | Deliverables complete; issue can be closed |
+
+GitHub Projects uses a built-in **Status** field with these three options. More labels (priority, area, etc.) can be added later.
+
+### Agent workflow
+
+1. **Before starting** — Read [MISSION.md](MISSION.md) and this file. Open the board and pick a **Todo** item (or take the one the user assigned).
+2. **Claim work** — Move the item to **In Progress** on the board (or ask the user to). Note the issue number in your session.
+3. **Execute** — Follow the issue body: Goal, Scope, Requirements, Do not, Deliverables.
+4. **Finish** — Move to **Done**, close the issue if appropriate, update [REVIEW.md](REVIEW.md) checklist items, commit only when the user asks.
+
+### Creating tasks (humans)
+
+**In the GitHub UI:** Project → **Add item** → **Create new issue**, or add an existing issue from the repo.
+
+**With `gh` CLI** (requires `project` scope — run `gh auth refresh -h github.com -s read:project,project` once):
+
+```bash
+# New issue + add to project board
+gh issue create --repo smkjason/beneon \
+  --title "Short task title" \
+  --body-file path/to/body.md \
+  --project beneon
+
+# Or add an existing issue
+gh project item-add <project-number> --owner smkjason \
+  --url https://github.com/smkjason/beneon/issues/<n>
+```
+
+### Generating tasks (agents)
+
+When the user asks you to **break down work** or **add tasks to the board**, create GitHub issues (not local markdown prompt files). Use this body template:
+
+```markdown
+## Goal
+One sentence outcome.
+
+## Scope
+Bulleted list of what is in / out.
+
+## Requirements
+- Concrete acceptance criteria
+
+## Do not
+- ios/, secrets, scope creep
+
+## Deliverables
+- What ships; REVIEW.md updates if relevant
+```
+
+Suggested order for bootstrap work: schema → auth → app shell → AI quiet time → CI. Local env setup can run anytime on a new machine.
+
+### Project board
+
+**Live board:** https://github.com/users/smkjason/projects/2 (Status: Todo / In Progress / Done)
+
+Fine-grained PATs cannot access user-owned Projects via `gh project` — manage the board in the GitHub UI, or use a classic token with `project` scope for CLI.
+
+Add existing issues in the UI: **Add item → Existing issue**, or (classic `project` token only):
+
+```bash
+gh project item-add 2 --owner smkjason --url https://github.com/smkjason/beneon/issues/<n>
+```
+
+Create a new task in one step:
+
+```bash
+gh issue create --repo smkjason/beneon --title "Task title" --body "## Goal\n..." --project beneon
+```
+
+### Moving items between columns
+
+**UI:** Drag cards on the board, or change **Status** on the issue sidebar.
+
+**CLI** (needs field IDs from `gh project field-list`):
+
+```bash
+gh project item-edit --id <item-id> --project-id <project-id> \
+  --field-id <status-field-id> --single-select-option-id <option-id>
+```
+
+Prefer the UI for status changes unless automating.
+
 ## Coding conventions
 
 Match existing code in `src/app/`:
@@ -130,6 +223,7 @@ Env vars in `.env.local` (see `.env.example`):
 ## Related docs
 
 - [MISSION.md](MISSION.md) — product mission and principles (**read first**)
+- [GitHub Project board](https://github.com/users/smkjason/projects/2) — kanban tasks (Todo / In Progress / Done)
 - [REVIEW.md](REVIEW.md) — status, checklist, open questions
 - [README.md](README.md) — human quick-start
 - [ios/README.md](ios/README.md) — iOS setup (paused)
